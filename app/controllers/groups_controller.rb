@@ -85,7 +85,7 @@ class GroupsController < ApplicationController
 
   private
 
-  def find_group_add_check_permission
+  def find_group_and_check_permission
     @group = Group.find(params[:id])
 
     if current_user != @group.user
